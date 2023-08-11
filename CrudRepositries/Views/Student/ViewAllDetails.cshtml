@@ -1,0 +1,43 @@
+﻿@model CrudRepositries.Models.Student
+
+@{
+    ViewData["Title"] = "ViewAllDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+  
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rollno)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rollno)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.standard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.standard)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="ViewDetails">Back to List</a>
+</div>
